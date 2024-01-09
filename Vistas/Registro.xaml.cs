@@ -23,11 +23,11 @@ public partial class Registro : ContentPage
         string apellido = txtApellido.Text;
         string edad = txtEdad.Text;
         string fecha = Fecha.Date.ToString();
-        string pais = pkPais.Items.ToString();
-        string ciudad = pkCiudad.Items.ToString();
+        string pais = pkPais.ToString();
+        string ciudad = pkCiudad.ToString();
         string montoInicial = txtPagoInicial.Text;
         string pagoMensual = txtPago.Text;
-        double total = Convert.ToDouble(montoInicial) + Convert .ToDouble(pagoMensual) + 4;
+        double total = Convert.ToDouble(montoInicial) + Convert .ToDouble(pagoMensual) * 4;
 
         DisplayAlert("RESUMEN \n", "Nombre: " + nombre + "\nApellido: " + apellido + "\nEdad: " + edad + "\nFecha: " + fecha + 
             "\nCiudad: " + ciudad + "\nPais: " + pais + "\nMonto Inicial: " + montoInicial + "\nPago Mensual: " + pagoMensual + "\nPago Total: " + total,"Regresar");
