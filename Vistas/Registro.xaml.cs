@@ -23,8 +23,8 @@ public partial class Registro : ContentPage
         string apellido = txtApellido.Text;
         string edad = txtEdad.Text;
         string fecha = Fecha.Date.ToString();
-        string pais = pkPais.ToString();
-        string ciudad = pkCiudad.ToString();
+        string pais = pkPais.SelectedItem.ToString();
+        string ciudad = pkCiudad.SelectedItem.ToString();
         string montoInicial = txtPagoInicial.Text;
         string pagoMensual = txtPago.Text;
         double total = Convert.ToDouble(montoInicial) + Convert .ToDouble(pagoMensual) * 4;
